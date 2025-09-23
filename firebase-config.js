@@ -1,13 +1,11 @@
 // firebase-config.js
 const firebaseConfig = {
-  apiKey: "AIzaSyC0ihgW1S5vhwcOf_xjq_gItAwO9fMy9co",
-  authDomain: "smart-health-companion-86e4a.firebaseapp.com",
-  projectId: "smart-health-companion-86e4a",
-  storageBucket: "smart-health-companion-86e4a.appspot.com",
-  messagingSenderId: "282997723090",
-  appId: "1:282997723090:web:2bcb44bcfa49613cda820b",
-  measurementId: "G-P1DY4E22FT"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
